@@ -1,15 +1,15 @@
 [
     {
-        "id": "da5d7772.b386f",
+        "id": "57e2d48dfcda45fe",
         "type": "tab",
         "label": "Conexion Bidireccional MQTT",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "914b1b89.588718",
+        "id": "da7fc91f2b38225d",
         "type": "mqtt out",
-        "z": "da5d7772.b386f",
+        "z": "57e2d48dfcda45fe",
         "name": "Led",
         "topic": "esp32/led",
         "qos": "0",
@@ -25,13 +25,13 @@
         "wires": []
     },
     {
-        "id": "210f92f5957dc5a0",
+        "id": "bb51deaa3d373153",
         "type": "ui_switch",
-        "z": "da5d7772.b386f",
+        "z": "57e2d48dfcda45fe",
         "name": "",
         "label": "Off / On",
         "tooltip": "",
-        "group": "c10a63920d79b2d8",
+        "group": "3bac0a170c640150",
         "order": 1,
         "width": 0,
         "height": 0,
@@ -54,15 +54,15 @@
         "y": 220,
         "wires": [
             [
-                "914b1b89.588718",
-                "1c2f7982b629dbf5"
+                "da7fc91f2b38225d",
+                "fdc21ab1a76cd95a"
             ]
         ]
     },
     {
-        "id": "714323aa1505ab9c",
+        "id": "f0e7dcd1afadab05",
         "type": "mqtt in",
-        "z": "da5d7772.b386f",
+        "z": "57e2d48dfcda45fe",
         "name": "Temperatura",
         "topic": "esp32/temp",
         "qos": "0",
@@ -76,29 +76,29 @@
         "y": 420,
         "wires": [
             [
-                "b3073c70192bd777",
-                "1c2f7982b629dbf5"
+                "fdc21ab1a76cd95a",
+                "3c63f0f6d863e10f"
             ]
         ]
     },
     {
-        "id": "b3073c70192bd777",
+        "id": "3c63f0f6d863e10f",
         "type": "ui_chart",
-        "z": "da5d7772.b386f",
+        "z": "57e2d48dfcda45fe",
         "name": "",
-        "group": "f22356be992877b0",
+        "group": "8bd0916a25d0896a",
         "order": 1,
         "width": 0,
         "height": 0,
-        "label": "Temperatura",
+        "label": "Temperatura °C",
         "chartType": "line",
         "legend": "false",
         "xformat": "HH:mm:ss",
         "interpolate": "linear",
         "nodata": "",
         "dot": false,
-        "ymin": "25",
-        "ymax": "30",
+        "ymin": "20",
+        "ymax": "35",
         "removeOlder": 1,
         "removeOlderPoints": "",
         "removeOlderUnit": "3600",
@@ -119,19 +119,19 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 670,
+        "x": 680,
         "y": 420,
         "wires": [
             []
         ]
     },
     {
-        "id": "12afed3b7a8113af",
+        "id": "96f3eca6201f0dfb",
         "type": "ui_gauge",
-        "z": "da5d7772.b386f",
+        "z": "57e2d48dfcda45fe",
         "name": "",
-        "group": "f22356be992877b0",
-        "order": 2,
+        "group": "6dcdb443594fd529",
+        "order": 1,
         "width": 0,
         "height": 0,
         "gtype": "gage",
@@ -153,9 +153,9 @@
         "wires": []
     },
     {
-        "id": "85f66a7a7442191f",
+        "id": "3650cbfcd267646a",
         "type": "mqtt in",
-        "z": "da5d7772.b386f",
+        "z": "57e2d48dfcda45fe",
         "name": "Humedad",
         "topic": "esp32/hum",
         "qos": "2",
@@ -169,15 +169,15 @@
         "y": 540,
         "wires": [
             [
-                "12afed3b7a8113af",
-                "1c2f7982b629dbf5"
+                "96f3eca6201f0dfb",
+                "fdc21ab1a76cd95a"
             ]
         ]
     },
     {
-        "id": "1c2f7982b629dbf5",
+        "id": "fdc21ab1a76cd95a",
         "type": "debug",
-        "z": "da5d7772.b386f",
+        "z": "57e2d48dfcda45fe",
         "name": "Debug",
         "active": true,
         "tosidebar": true,
@@ -190,6 +190,36 @@
         "x": 650,
         "y": 320,
         "wires": []
+    },
+    {
+        "id": "d93b38cce598d470",
+        "type": "ui_spacer",
+        "z": "57e2d48dfcda45fe",
+        "name": "spacer",
+        "group": "f22356be992877b0",
+        "order": 1,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "a553ed8a83dfcdb5",
+        "type": "ui_spacer",
+        "z": "57e2d48dfcda45fe",
+        "name": "spacer",
+        "group": "f22356be992877b0",
+        "order": 3,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "5aaaf32a473feed9",
+        "type": "ui_spacer",
+        "z": "57e2d48dfcda45fe",
+        "name": "spacer",
+        "group": "f22356be992877b0",
+        "order": 4,
+        "width": 6,
+        "height": 1
     },
     {
         "id": "a38af363efe262f6",
@@ -219,9 +249,9 @@
         "sessionExpiry": ""
     },
     {
-        "id": "c10a63920d79b2d8",
+        "id": "3bac0a170c640150",
         "type": "ui_group",
-        "name": "Encender LED",
+        "name": "LED",
         "tab": "ab273459232bec66",
         "order": 1,
         "disp": true,
@@ -230,11 +260,22 @@
         "className": ""
     },
     {
-        "id": "f22356be992877b0",
+        "id": "8bd0916a25d0896a",
         "type": "ui_group",
         "name": "Sensor DHT",
         "tab": "ab273459232bec66",
         "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6dcdb443594fd529",
+        "type": "ui_group",
+        "name": "Sensor DHT",
+        "tab": "ab273459232bec66",
+        "order": 3,
         "disp": true,
         "width": "6",
         "collapse": false,
